@@ -1,0 +1,6 @@
+configuration,spoilage_kg,spoilage_pct,fulfillment_pct,transport_cost,risk_score,recovery_time_seconds,rerouted_quantity_kg,objective_value
+Full DPSRO Model,1322.6,4.88,88.64,7295.41,10173.0,0.00499,13100.0,100783.23
+Ablated: Without Perishability Weight (λ_spoil=0),1322.6,4.88,88.64,7295.41,10173.0,0.00428,13100.0,88765.38
+Ablated: Without Disruption Risk Weight (λ_risk=0),1320.5,4.87,88.65,7309.48,10255.11,0.00442,13100.0,62188.37
+Ablated: Static Restart (No Dynamic State Preservation),1005.3,3.34,100.0,7984.12,13321.56,0.00504,30115.3,77858.31
+"Ablated: Cost-Only Optimization (λ_spoil=0, λ_risk=0)",3246.0,11.07,89.62,7943.46,11642.1,0.00556,15310.0,46018.12

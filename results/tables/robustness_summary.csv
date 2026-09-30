@@ -1,0 +1,6 @@
+,spoilage_pct,spoilage_pct,spoilage_pct,spoilage_pct,spoilage_pct,fulfillment_pct,fulfillment_pct,fulfillment_pct,fulfillment_pct,fulfillment_pct,transport_cost,transport_cost,transport_cost,recovery_time_seconds,recovery_time_seconds,is_feasible
+,mean,std,median,min,max,mean,std,median,min,max,mean,std,median,mean,max,mean
+method,,,,,,,,,,,,,,,,
+Cheapest Route Baseline,6.76,6.125,4.975,0.62,24.9,91.603,7.368,93.565,67.76,99.38,6090.69,2688.527,5398.635,0.004,0.007,1.0
+Dynamic Re-Optimization (DPSRO),3.113,2.938,1.885,0.3,13.11,90.659,10.08,95.55,68.58,100.0,6011.258,2297.176,5655.025,0.003,0.006,0.55
+Nearest Market Baseline,28.658,11.182,27.125,9.67,81.37,70.003,11.026,71.275,18.63,90.33,7571.878,3099.214,6962.615,0.0,0.002,1.0

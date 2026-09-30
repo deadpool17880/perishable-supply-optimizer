@@ -1,0 +1,33 @@
+# Dynamic Perishable Supply-Chain Resilience Optimizer (DPSRO)
+# Central Configuration
+
+random_seed: 42
+
+# Objective Function Weights: Minimize J = lambda_spoilage * Spoilage + lambda_cost * Cost + lambda_unmet_demand * UnmetDemand + lambda_risk * Risk
+weights:
+  lambda_spoilage: 10.0      # Penalty per unit (kg) of spoiled produce
+  lambda_cost: 0.15          # Cost per monetary unit of transportation
+  lambda_unmet_demand: 15.0  # Penalty per unit (kg) of unfulfilled market demand
+  lambda_risk: 5.0           # Penalty for traversing high-risk or disrupted segments
+
+# Perishability & Spoilage Kinetic Parameters
+spoilage:
+  alpha: 2.5                 # Shelf life decay sensitivity factor
+  beta: 0.8                  # Temperature penalty coefficient
+  gamma: 0.5                 # Travel delay penalty coefficient
+  reference_temperature: 4.0 # Optimal cold-chain reference temperature (°C)
+  spoilage_threshold: 0.85   # Quality threshold below which produce is deemed unsellable/spoiled
+
+# Solver Settings
+solver:
+  type: "scipy"              # 'scipy' (HiGHS MIP/LP) or 'pulp'
+  time_limit_seconds: 30
+  optimality_tolerance: 1e-4
+
+# Default Network Generation
+network:
+  default_farms: 3
+  default_storage: 2
+  default_markets: 3
+  default_batches: 10
+  default_trucks: 5

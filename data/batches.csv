@@ -1,0 +1,11 @@
+batch_id,farm_id,commodity,quantity,harvest_time,initial_shelf_life_hours,remaining_shelf_life_hours,temperature,quality_level
+B01,F1,Leafy Greens,700.0,13.4,43.8,30.4,22.6,0.69
+B02,F2,Tomatoes,2110.0,32.1,133.0,100.9,26.8,0.76
+B03,F3,Apples,660.0,69.7,189.0,119.3,21.5,0.63
+B04,F1,Apples,880.0,45.8,316.8,270.9,18.8,0.86
+B05,F2,Leafy Greens,2210.0,25.2,63.8,38.7,28.4,0.61
+B06,F3,Peaches,1230.0,15.6,61.3,45.7,22.4,0.75
+B07,F1,Leafy Greens,1870.0,16.9,60.1,43.2,18.9,0.72
+B08,F2,Leafy Greens,1420.0,5.4,55.2,49.8,21.2,0.9
+B09,F3,Apples,2040.0,26.6,204.9,178.3,18.7,0.87
+B10,F1,Berries,630.0,7.0,43.3,36.4,29.0,0.84
