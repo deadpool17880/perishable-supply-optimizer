@@ -2,7 +2,25 @@
 
 > **Adaptive allocation of perishable agricultural inventory under acute supply-chain disruption.**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=deadpool17880/perishable-supply-optimizer&branch=main&mainModule=dashboard/app.py)
+[![Cloud Run Deploy](https://deploy.cloud.run/button.svg)](https://console.cloud.google.com/run)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Complete%20Pipeline%20Notebook-orange.svg)](file:///Users/parvatapuramrevanth/.gemini/antigravity/scratch/perishable_supply_optimizer/DPSRO_Complete_Optimization_Pipeline.ipynb)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-deadpool17880%2Fperishable--supply--optimizer-blue.svg)](https://github.com/deadpool17880/perishable-supply-optimizer)
+
 ---
+
+### 🚀 Instant Deployment Options
+1. **Streamlit Community Cloud (1-Click Live Web Link)**:
+   - Once pushed to GitHub, launch instantly on [Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=deadpool17880/perishable-supply-optimizer&branch=main&mainModule=dashboard/app.py).
+2. **Google Cloud Run (Serverless Container)**:
+   - Deploy directly from source:
+     ```bash
+     gcloud run deploy perishable-supply-optimizer --source . --platform managed --region us-central1 --allow-unauthenticated --port 8080
+     ```
+   - Or run `./deploy_cloud_run.sh`.
+3. **Master Standalone Jupyter Notebook**:
+   - Run the all-in-one runnable notebook: [`DPSRO_Complete_Optimization_Pipeline.ipynb`](file:///Users/parvatapuramrevanth/.gemini/antigravity/scratch/perishable_supply_optimizer/DPSRO_Complete_Optimization_Pipeline.ipynb).
+
 
 ## 1. Executive Summary & Problem Statement
 
