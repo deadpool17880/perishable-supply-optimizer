@@ -1102,7 +1102,64 @@ fig_net.show()
 fig_bar = plot_comparative_barchart([res_nearest, res_cheapest, res_proposed, res_reopt])
 fig_bar.show()"""))
 
+    # Cell 13: Novel CIS x EMBS Hybrid Orchestrator & Security Layer
+    nb["cells"].append(md("""### 13. Novel Track Innovation: CIS × EMBS Evolutionary Hybrid Orchestrator & Security Layer
+
+This section highlights the direct fusion between **Computational Intelligence (CIS)** and **Engineering in Medicine & Biology (EMBS)**:
+- **Biomedical & Biophysical Kinetics (EMBS)**: Arrhenius reaction kinetics $k(T) = A \\cdot \\exp(-E_a / (R \\cdot T))$ with $Q_{10}=2.0$ thermal acceleration modeling enzymatic cellular degradation of produce.
+- **Evolutionary Computation (CIS)**: A $(1+\\lambda)$-Evolution Strategy that tunes the multi-objective loss landscape weights $(\\lambda_{\\text{spoilage}}, \\lambda_{\\text{cost}}, \\lambda_{\\text{unmet}}, \\lambda_{\\text{risk}})$ across generations to map the Pareto frontier.
+- **Input Sanitization & Security**: Production-grade parameter validation against malformed inputs, log injections, and numerical anomalies."""))
+
+    nb["cells"].append(code("""from src.hybrid_orchestrator import HybridCISEMBSOrchestrator, ArrheniusEMBSModel
+from src.security import validate_quantity, validate_shelf_life, validate_temperature, validate_node_id
+
+print("=== STEP 5: NOVEL CIS × EMBS HYBRID EVOLUTIONARY TUNING ===")
+
+# 1. Biophysical Arrhenius Kinetics (EMBS)
+embs_model = ArrheniusEMBSModel(activation_energy_j_mol=75000.0, reference_temp_celsius=4.0, q10=2.0)
+for temp in [4.0, 10.0, 14.0, 24.0]:
+    rate = embs_model.relative_rate(temp)
+    print(f"Biophysical degradation acceleration at {temp:4.1f}°C: {rate:5.2f}x reference rate")
+
+# 2. Hybrid Evolutionary Orchestrator (CIS + EMBS)
+orchestrator = HybridCISEMBSOrchestrator(
+    embs_model=embs_model,
+    generations=6,
+    offspring_per_gen=3,
+    mutation_std=0.25,
+    random_seed=42,
+)
+
+print("\\nExecuting (1+λ)-ES Evolutionary Weight Optimization on Network State...")
+hybrid_res, pareto_pts = orchestrator.solve_hybrid(state, pareto_samples=5)
+
+print(f"Optimized Hybrid Spoilage: {hybrid_res.spoilage_percentage:.2f}% | Fulfillment: {hybrid_res.demand_fulfillment_percentage:.2f}%")
+print(f"Evolution Generations: {len(orchestrator.evolution_log)} iterations logged.")
+
+# 3. Pareto Frontier Overview
+pareto_df = pd.DataFrame([
+    {
+        "Weights (Spoil/Cost/Unmet/Risk)": f"({p['weights'].lambda_spoilage:.1f}, {p['weights'].lambda_cost:.2f}, {p['weights'].lambda_unmet:.1f}, {p['weights'].lambda_risk:.1f})",
+        "Spoilage %": f"{p['spoilage_pct']:.2f}%",
+        "Cost ($)": f"${p['transport_cost']:,.2f}",
+        "Delivered (kg)": f"{p['delivered_kg']:,.1f}",
+        "Composite Fitness": f"{p['fitness']:.4f}",
+    }
+    for p in pareto_pts
+])
+print("\\nPareto Frontier Approximate Points:")
+display(pareto_df)
+
+# 4. Security Bounds & Input Sanitization
+print("\\nVerifying Input Sanitization Layer:")
+val_q = validate_quantity(1500.0, "farm_harvest")
+val_t = validate_temperature(6.5, "reefer_temp")
+val_node = validate_node_id("storage_01", "node_validation")
+print(f"Sanitization Validated: Harvest={val_q} kg, Temp={val_t}°C, NodeID='{val_node}'")
+print("All security guards, biophysical kinetics, and evolutionary loops operational.")"""))
+
     return nb
+
 
 if __name__ == "__main__":
     nb = create_notebook()

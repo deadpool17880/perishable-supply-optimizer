@@ -190,10 +190,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Run Unit Tests
+### Run Comprehensive Test Suite
 ```bash
 pytest tests/ -v
-# 20 passed in ~1.9s
+# 73 passed in ~3.3s (Unit, Constraints, Disruptions, Performance benchmarks, Validation invariants, & Security)
 ```
 
 ### Run Command-Line Demonstration

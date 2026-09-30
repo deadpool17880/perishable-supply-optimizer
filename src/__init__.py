@@ -85,6 +85,21 @@ from src.models import (  # noqa: F401
 from src.spoilage_model import SpoilageModel  # noqa: F401
 from src.optimizer import DynamicPerishableOptimizer  # noqa: F401
 from src.data_generator import generate_supply_chain  # noqa: F401
+from src.hybrid_orchestrator import (  # noqa: F401
+    HybridCISEMBSOrchestrator,
+    ArrheniusEMBSModel,
+    WeightVector,
+)
+from src.security import (  # noqa: F401
+    validate_quantity,
+    validate_shelf_life,
+    validate_temperature,
+    validate_lambda_weight,
+    validate_node_id,
+    validate_optimizer_config,
+    safe_get_env,
+)
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "DPSRO Team — IEEE EMBS × CIS Hackathon"
+
